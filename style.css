@@ -1,0 +1,56 @@
+body {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%), url('image/ju.png'), black;
+    background-size: auto 100%;
+    /* Garder la largeur originale et ajuster la hauteur */
+    background-position: center center;
+    /* Centrer l'image */
+    background-repeat: no-repeat;
+    /* Empêcher la répétition de l'image */
+    color: white;
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.question {
+    font-size: 32px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.buttons-row {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+button {
+    width: 120px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#yesBtn,
+#yesBtn2 {
+    background-color: #4CAF50;
+}
+
+#noBtn,
+#noBtn2 {
+    background-color: #f44336;
+}
+
+#noBtn {
+    transition: opacity 0.5s;
+}
