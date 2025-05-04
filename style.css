@@ -1,11 +1,9 @@
 body {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%), url('image/ju.png'), black;
-    background-size: auto 100%;
-    /* Garder la largeur originale et ajuster la hauteur */
-    background-position: center center;
-    /* Centrer l'image */
-    background-repeat: no-repeat;
-    /* Empêcher la répétition de l'image */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%),
+        url('image/ju.png'),
+        black;
+    background-size: 45% 100%;
+    background-position: left center, center center, right center;
     color: white;
     font-family: 'Arial', sans-serif;
     height: 100vh;
@@ -14,9 +12,16 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    position: relative;
 }
 
-
+.question-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin-bottom: 20px;
+}
 
 .question {
     font-size: 32px;
@@ -25,9 +30,12 @@ body {
 }
 
 .buttons-row {
+    position: relative;
     display: flex;
     justify-content: center;
     gap: 50px;
+    width: 100%;
+    height: 100px;
 }
 
 button {
@@ -46,11 +54,31 @@ button {
     background-color: #4CAF50;
 }
 
-#noBtn,
-#noBtn2 {
+#noBtn {
     background-color: #f44336;
+    position: relative;
+    transition: all 0.2s ease-in-out;
 }
 
-#noBtn {
-    transition: opacity 0.5s;
+#noBtn2 {
+    position: absolute;
+    background-color: #f44336;
+    transition: all 0.5s ease-in-out;
+    opacity: 1;
+    left: 50%;
+    /* Position initiale centrée */
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    /* Empêche de dépasser horizontalement */
+    max-height: 100%;
+    /* Empêche de dépasser verticalement */
+    overflow: hidden;
+    /* Évite les débordements */
+}
+
+#next-question .buttons-row {
+    justify-content: center;
+    gap: 20px;
+    /* Adjust spacing between buttons */
 }

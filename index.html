@@ -3,14 +3,13 @@
 
 <head>
   <meta charset="UTF-8">
-
   <title>xor little question</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
   <div id="question-container">
-    <div class="question">Tu promets de répondre à ma question ?</div>
+    <img src="image/question.png" alt="Image" class="question-image">
     <div class="buttons-row">
       <button id="yesBtn" onclick="handleYes()">OUI</button>
       <button id="noBtn" onclick="handleNo()">NON</button>
@@ -18,10 +17,10 @@
   </div>
 
   <div id="next-question" style="display: none;">
-    <div class="question">user_xor est il supérieur à vous ? </div>
+    <div class="question">user_xor est-il supérieur à vous ? </div>
     <div class="buttons-row">
       <button id="yesBtn2" onclick="showMessage()">OUI</button>
-      <button id="noBtn2">NON</button>
+      <button id="noBtn2" onmouseover="moveButton2()">NON</button>
     </div>
   </div>
 
